@@ -59,6 +59,7 @@ struct rtl8366_smi {
 	u16			dbg_reg;
 	u8			dbg_vlan_4k_page;
 #endif
+	struct mii_bus		*ext_mbus;
 };
 
 struct rtl8366_vlan_mc {

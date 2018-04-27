@@ -45,6 +45,19 @@ define Device/Archer
   IMAGE/sysupgrade.bin := tplink-v2-image -s -e | append-metadata
 endef
 
+define Device/ArcherC2
+  $(Device/Archer)
+  DTS := ArcherC2
+  SUPPORTED_DEVICES := c2
+  TPLINK_FLASHLAYOUT := 8Mmtk
+  TPLINK_HWID := 0xc7500001
+  TPLINK_HWREV := 50
+  IMAGES += factory.bin
+  DEVICE_TITLE := TP-Link ArcherC2
+  DEVICE_PACKAGES := kmod-usb2 kmod-usb-ohci kmod-usb-ledtrig-usbport kmod-switch-rtl8366-smi kmod-switch-rtl8367b
+endef
+TARGET_DEVICES += ArcherC2
+
 define Device/ArcherC20i
   $(Device/Archer)
   DTS := ArcherC20i

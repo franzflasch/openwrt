@@ -244,6 +244,7 @@ platform_check_image() {
 		}
 		return 0
 		;;
+	c2|\
 	c20i|\
 	c50|\
 	mr200|\
